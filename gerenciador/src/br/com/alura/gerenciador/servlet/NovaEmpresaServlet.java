@@ -13,13 +13,13 @@ import jakarta.servlet.http.HttpServletResponse;
 public class NovaEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Cadastrando nova empresa!");
 		String nomeEmpresa = request.getParameter("nome");
-		String cnpjEmpresa = request.getParameter("cnpj");
+//		String cnpjEmpresa = request.getParameter("cnpj");
 		PrintWriter out = response.getWriter();
-		out.println("<hml><body>Empresa " + nomeEmpresa + " com CNPJ: " + cnpjEmpresa + " cadastrada com Sucesso!</body></html");
+		out.println("<html><body>Empresa " + nomeEmpresa + "  cadastrada com sucesso!</body></html");
+	
 	}
 
 }
